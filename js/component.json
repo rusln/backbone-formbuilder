@@ -1,0 +1,13 @@
+{
+    "name": "lazy form",
+    "version":"0",
+    "dependencies":{
+        "jquery":null,
+        "backbone-amd":null,
+        "underscore-amd":null,
+        "requirejs":null,
+        "requirejs-text":null
+    }
+}
+
+

@@ -1,0 +1,9 @@
+{
+  "name": "bower-bootstrap-css",
+  "version": "0.0.0",
+  "commit": "bead71497fe6f14b26611871c08deee48570ceb6",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ch1c0t/bower-bootstrap-css.git"
+  }
+}

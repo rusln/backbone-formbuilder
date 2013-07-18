@@ -1,0 +1,97 @@
+#form-container{
+    background-color:#faf2cc;
+    border:2px solid #fbf9ee;
+    margin:5px;
+}
+#form-container > div{
+    text-align:right;
+}
+#form-container .form-options{
+    text-align: left;
+    display:none;
+    z-index:999;
+    position:absolute;
+    background-color:#faf2cc;
+    width: 460px;
+}
+#form-container  ul{
+    margin: 0 auto;
+}
+#form-result{
+    display:none;
+    background-color: white;
+    padding:1em;
+}
+#form-result > form{
+    background-color: white;
+    padding: 1em;
+    
+}
+#form-result  span{
+    margin:1em auto;
+    display: block;
+    /*padding: 0 2em;*/
+    
+}
+body{
+    background-color:#DDD;
+}
+#container{
+    margin:0 auto;
+}
+#container + div{
+    /*margin:0 auto;*/
+}
+header{
+    background-color:#faf2cc;
+    
+    padding:3em;
+}
+#main-header nav > ul li{
+    list-style-type: none;
+    display: block;
+    float:left;
+}
+.field-template {
+    /*background-color:#faf2cc;*/
+    background-color:#fbf9ee;
+    margin:5px;
+    list-style: none;
+    padding:5px;
+    /*display:inline-block;*/
+    /*width:95%;*/
+}
+.field-template > .field-menu{
+    
+    text-align: right;
+    display:block;
+    width:100%;
+}
+.field-template > .field-preview{
+display:block;
+background-color:#faf2bb;
+/*width:90%;*/
+text-align: left;
+margin:1em auto;
+padding:5px;
+}
+.field-template > .field-options{
+display:none;
+padding: 0 10%;
+margin:1em auto;
+}
+.field-template > .field-options > div > div {
+/*float:left;*/
+}
+#toolbox{
+    text-align: center;
+    background: #faf2cc;
+    width:105px;
+    margin:1em;
+    float:right;
+}
+#toolbox li{
+    margin:5px 5px;
+    list-style-type: none;
+}
+

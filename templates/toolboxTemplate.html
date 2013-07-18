@@ -1,0 +1,10 @@
+
+<% _.each(toolbox,function(tool,index,toolbox){ %>
+<li class="toolbox-item"><button class="btn btn-info btn-block" data-element="<%= tool.element%>"
+                                 <% if(tool.element =="input") {%> 
+                                 data-type="<%= tool.type %>" 
+                                 <%} %> 
+                                 > <%= tool.name %> </button></li>
+<% }); %>
+
+</div>
