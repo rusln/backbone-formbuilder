@@ -4,7 +4,7 @@ Backbone Formbuilder is a side-project and a work in progress.
 
 Backbone Formbuilder is an attempt at building a non trivial backbone app. I've decided
 not to use any 3rd party plugins because i want to encounter the problems that these plugins
-are trying to solve in the first place. Because i believe that adding another level of 
+are trying to solve in the first place. I believe that adding another level of 
 abstraction/complexity that solves a problem i don't yet understand is silly. 
 
 
