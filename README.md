@@ -7,7 +7,6 @@ not to use any 3rd party plugins because i want to encounter the problems that t
 are trying to solve in the first place. Because i believe that adding another level of 
 abstraction/complexity that solves a problem i don't yet understand is silly. 
 
-I've decided not to use any
 
 Used libraries and frameworks: 
 
