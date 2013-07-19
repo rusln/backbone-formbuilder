@@ -19,10 +19,8 @@ define([
             return this;
         },
         getTemplate:function(model){
-            return JST[this.searchTemplate(model)](model.toJSON());
-        },
-        searchTemplate:function(model){
-            return "preview/"+model.get("element")+(model.get("type") ? "/"+model.get("type"):"");
+            // get a preview template and render our model
+            return (JST.getTemplate(model,"preview"))(model.toJSON());
         }
 });
     return FieldPreview;

@@ -4,6 +4,7 @@ define([
 ],function(Input,labelMixin){
     var Password = Input.extend({
         defaults:{
+            type:"password",
             labelValue:"password",
             labelFor:"",
             // max length for the password

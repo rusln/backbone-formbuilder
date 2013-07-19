@@ -10,6 +10,7 @@ require.config({
     }
 });
 
-require(["app"],function(app){
+require(["app","bootstrap"],function(app,bootstrap){
+    bootstrap.initialize();
     app.initialize();
 });

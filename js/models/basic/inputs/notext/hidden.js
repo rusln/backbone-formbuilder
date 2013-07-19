@@ -3,7 +3,7 @@ define([
 ],function(Input){
    var InputHidden = Input.extend({
        defaults:{
-           "type":"hidden",
+           type:"hidden",
             // value will be submitted to the server
             value:""
        },

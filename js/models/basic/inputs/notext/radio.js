@@ -3,7 +3,7 @@ define([
 ],function(Input){
    var InputRadio = Input.extend({
        defaults:{
-           "type":"radio",
+           type:"radio",
             // label for this element
             labelValue:"",
             // label for this element

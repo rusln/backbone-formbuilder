@@ -9,7 +9,8 @@ define([
     "views/toolbox/toolboxView",
     "models/basic/form",
     "collections/templateCollection",
-    "views/template/field/fieldCollectionView"
+    "views/template/field/fieldCollectionView",
+    "settings/collections/collectionSettings"
 ],function(
         ContainerView,
         HeaderMenuView,
@@ -20,12 +21,12 @@ define([
         FormPreviewView,
         ToolboxView,
         FormModel,
-        TemplateCollection
+        TemplateCollection,
+        getModel
     ){
     
     // init our app 
     var init = function(){
-        
         var headerMenu = new HeaderMenuView();
         
         var templateCollection = new TemplateCollection();

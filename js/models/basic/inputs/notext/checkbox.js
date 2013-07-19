@@ -5,7 +5,7 @@ define([
 ],function(Backbone,_,globalMixin){
    var InputCheckbox = Backbone.Model.extend({
        defaults:{
-           "type":"checkbox",
+           type:"checkbox",
             // value to send to the server
             value:"",
 //            is this value checked 

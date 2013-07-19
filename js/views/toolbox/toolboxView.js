@@ -31,7 +31,9 @@ define([
             this.collection = toolBoxCollection;
         },
         render:function(){
-            this.$el.html(this.template({toolbox:this.collection.toJSON()}));
+            this.collection.each(function(model){
+                this.$el.append(this.template(model.toJSON()));
+            },this);
         },
         addField:function(e){
             var d = e.currentTarget.dataset, options =  {};
