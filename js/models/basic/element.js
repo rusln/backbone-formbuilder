@@ -27,6 +27,7 @@ define([
            this.on("change",this.notify);
         },
         notify:function(){
+            //globalish element change notifier, usefull ? who knows,...
             vent.trigger("element:changed",arguments);
         }
     });

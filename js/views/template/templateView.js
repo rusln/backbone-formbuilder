@@ -69,6 +69,7 @@ define([
         addField: function(field) {
             field.collectionIndex = this.collection.length;
             if(field.element === "fieldset") field.fields = new TemplateSubCollection();
+            console.log(field);
             this.collection.add(field);
         },
         // get id of a field tempate

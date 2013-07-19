@@ -3,7 +3,7 @@ define([
     "underscore",
     "views/form/formOptionsView"
 ],function(Backbone,_,FormOptionsView){
-    var FormView = Backbone.View.extend({
+    var FieldsetView = Backbone.View.extend({
         el:'#form-container',
         initialize:function(options){
             this.model = options.model;
@@ -16,5 +16,5 @@ define([
             return this;
         }
     });
-    return FormView;
+    return FieldsetView;
 });
