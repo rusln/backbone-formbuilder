@@ -1,3 +1,4 @@
+
 define([
     "underscore",
     "backbone",
@@ -5,7 +6,6 @@ define([
     'text!templates/formResultTemplate.html'
 ],function(_,Backbone,vent,template){
     var FormPreview = Backbone.View.extend({
-//        el:"#form-result",
         template: _.template(template),
         events:{},
         togglePreview:function(e){
@@ -39,9 +39,15 @@ define([
             return this;
         },
         renderField:function(model){
-            var frag = $("<span>").attr("id",model.cid);
-            frag.html(this.getTemplate(model));
-            return frag;
+            var span = $("<span>").attr("id",model.cid);
+            span.html(this.getTemplate(model));
+            return span;
+        },
+        renderCollection:function($el,collection){
+                $el.empty();
+                collection.each(function(model){
+                $el.append(this.renderField(model));
+                },this);
         },
         getTemplate:function(model){
             return JST[this.searchTemplate(model)](model.toJSON());

@@ -1,5 +1,7 @@
 define([
-    "settings/underscore/underscoreSettings"
+    "settings/underscore/underscoreSettings",
+    "mixins/views/viewMixin",
+    "mixins/collections/collectionMixin"
 ],function(){
     var libs = [].slice.call(arguments),
         init = function(){

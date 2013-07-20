@@ -10,7 +10,6 @@ define([
     "models/basic/form",
     "collections/templateCollection",
     "views/template/field/fieldCollectionView",
-    "settings/collections/collectionSettings"
 ],function(
         ContainerView,
         HeaderMenuView,
@@ -21,8 +20,7 @@ define([
         FormPreviewView,
         ToolboxView,
         FormModel,
-        TemplateCollection,
-        getModel
+        TemplateCollection
     ){
     
     // init our app 
@@ -48,7 +46,6 @@ define([
             menuView:new TemplateMenuView({parent:templateView,model:formModel,formOptions:formOptionsView})
         });
         var toolboxView = new ToolboxView();
-        
         //create the live preview of the form 
         var formPreview = new FormPreviewView({model:formModel,el:"#form-result"});
         var containerView = new ContainerView({

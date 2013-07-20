@@ -1,6 +1,6 @@
 define([
     "backbone",
-    "settings/collections/collectionSettings"
+    "helpers/collection/modelInit"
 ],function(Backbone,helper){
     var TemplateCollection = Backbone.Collection.extend({
         comparator:function(model){
@@ -9,6 +9,9 @@ define([
         model: function(attrs,options){
             // search for the right model based on attrs, and return a new instance 
             return new (helper.getModel(attrs,options))(attrs,options);
+        },
+        toJSON2:function(){
+            console.log(JSON.stringify(this));
         }
     });
     return TemplateCollection;

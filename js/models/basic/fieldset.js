@@ -7,11 +7,8 @@ define([
             legend:"Title of this fieldset"
         },
         initialize:function(options){
+            if(options && options.fields) this.fields = options.fields;
             Element.prototype.initialize.apply(this,arguments);
-            if(options.fields) {
-                this.fields  = options.fields;
-            }
-            
         }
     });
     _.defaults(Fieldset.prototype.defaults,Element.prototype.defaults);

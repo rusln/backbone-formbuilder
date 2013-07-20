@@ -17,9 +17,14 @@ define([
         events:{
             "click .toggle-options":"toggleSettings",
             "click .toggle-visual-options":"toggleVisualSettings",
-//            "click .delete": "removeField",
+            "click .delete": "removeSelf",
             "sort:start":"startSorting",
             "sort:stop":"stopSorting"
+        },
+        initialize:function(options){
+            if(options && options.template) this.template = _.template(options.template);
+            this.optionsView = new OptionsView({model:this.model,parent:this});
+            this.fieldPreviewView = new FieldPreview({model:this.model,parent:this});
         },
         startSorting:function(event,index){
             vent.trigger("sort:start",{model:this.model,index:index});
@@ -28,9 +33,18 @@ define([
         stopSorting:function( event ,index){
             vent.trigger("sort:stop",{model:this.model,index:index});
         },
-        initialize:function(){
-            this.optionsView = new OptionsView({model:this.model,parent:this});
-            this.fieldPreviewView = new FieldPreview({model:this.model,parent:this});
+        getIndex:function(){
+            return this.$el.index();
+        },
+        removeSelf: function(e) {
+            var index = this.getIndex(e);
+            this.model.destroy();
+                this.$el.slideToggle(100)
+                    .promise()
+                    .done(function() {
+                        vent.trigger("field:removed",{index:index});
+                        this.remove();
+            });
         },
         render:function(){
             // assign  model's cid to this view's id
@@ -53,8 +67,6 @@ define([
                 this.optionToggle.html(this.optionsView.render().el);
             };
             this.optionToggle.slideToggle(160);
-//            vent.trigger("fieldview:toggleOptions",{active:this.$el});
-            
         },
         toggleVisualSettings:function(e){
             this.$el.resizable({
